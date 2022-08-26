@@ -18,9 +18,7 @@ const QuoteBox = () => {
     const [color, setColor] = useState( randomColor() )
     
     const nextQuote = () => {
-        let idx = indexQuote+1
-        if( idx > quotes.length-1 ) idx = 0
-        setIndexQuote(idx)
+        setIndexQuote(randomIndexQuote())
 
         setColor( randomColor() )
     }
